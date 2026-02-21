@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>European Football Player Valuation Engine</title>
+    <meta name="description" content="Advanced AI-powered football player valuation system with real-time market analytics, comparable transfer analysis, and predictive modeling.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="app">
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="18" stroke="url(#logoGrad)" stroke-width="2.5"/>
+                        <path d="M20 6 L26 16 L34 18 L28 24 L30 34 L20 28 L10 34 L12 24 L6 18 L14 16 Z" fill="url(#logoGrad)" opacity="0.8"/>
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                                <stop offset="0%" stop-color="#00F593"/>
+                                <stop offset="100%" stop-color="#00B4D8"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">ValuEngine</span>
+                    <span class="logo-sub">Player Analytics</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#/dashboard" class="nav-item active" data-page="dashboard">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#/players" class="nav-item" data-page="players">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    <span>Players</span>
+                </a>
+                <a href="#/compare" class="nav-item" data-page="compare">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                    <span>Compare</span>
+                </a>
+                <a href="#/transfers" class="nav-item" data-page="transfers">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    <span>Transfers</span>
+                </a>
+                <a href="#/architecture" class="nav-item" data-page="architecture">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                    <span>Architecture</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="model-badge">
+                    <span class="model-dot"></span>
+                    Model v3.2.1 Active
+                </div>
+                <div class="data-freshness">
+                    <span class="freshness-dot"></span>
+                    Data: 12 min ago
+                </div>
+            </div>
+        </aside>
+        <main id="main-content" class="main-content">
+            <header class="top-bar">
+                <div class="search-container">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <input type="text" id="global-search" class="search-input" placeholder="Search players, clubs, leagues...">
+                    <div id="search-results" class="search-results hidden"></div>
+                </div>
+                <div class="top-bar-right">
+                    <div class="market-pill">
+                        <span class="market-dot pulse"></span>
+                        Market Open
+                    </div>
+                    <div class="notification-bell">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+                        <span class="notif-badge">3</span>
+                    </div>
+                </div>
+            </header>
+            <div id="page-container" class="page-container">
+                <!-- Pages rendered here -->
+            </div>
+        </main>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
