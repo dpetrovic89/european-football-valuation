@@ -39,7 +39,7 @@ git clone https://github.com/YOUR_USERNAME/european-football-valuation.git
 cd european-football-valuation
 
 # Serve locally (requires Node.js)
-npx -y serve web -l 3000
+npx -y serve . -l 3000
 
 # Open in browser
 # http://localhost:3000
@@ -53,8 +53,8 @@ npx -y serve web -l 3000
 
 ```
 european-football-valuation/
+├── index.html              # App shell — sidebar, search bar, page container
 ├── web/
-│   ├── index.html          # App shell — sidebar, search bar, page container
 │   ├── index.css           # Design system — dark theme, glassmorphism, grids
 │   ├── app.js              # Hash-based router & global search
 │   ├── data.js             # Mock data — 30 players, stats, transfers, leagues
