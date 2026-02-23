@@ -37,7 +37,7 @@ Interactive 6-layer system diagram — from client apps through API gateway, mic
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/european-football-valuation.git
+git clone https://github.com/dpetrovic89/european-football-valuation.git
 cd european-football-valuation
 
 # Serve locally (requires Node.js)
